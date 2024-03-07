@@ -1,0 +1,101 @@
+<!DOCTYPE html> <html><head>
+        <title>What Club America player are you?</title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+    font-family: 'Oswald', sans-serif;
+    background-color: yellow;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+buttons {
+    margin: auto;
+}
+
+.chu {
+    display: none;
+}
+
+.lay {
+    display: none;
+}
+
+.fid {
+    display: none;
+}
+
+.marche {
+    display: none;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1>What Club America player are you?</h1>
+        </div>
+        <div class="questions">
+
+            <div class="goals">
+                <img src="https://a.espncdn.com/photo/2018/1216/r478513_1296x729_16-9.jpg" alt="Club America lifting their 13 league title as champions">
+                <h4>How many goals do you want? pick a number 1-52</h4>
+
+                <input placeholder="Put number" class="NUM">
+                <br>
+            </div>
+            <img src="https://stconcacafwp001.blob.core.windows.net/media/gtuozcht/52815.jpg" alt="Club america winning their 11 league title">
+        </div>
+        <div class="postions">
+            <h4>Where do you play? Mid field, foward, defense,Goalie.
+            </h4>
+            <input placeholder="Put Postion" class="username"><button>Submit</button>
+        </div>
+
+        <div class="result">
+            this is where the user will see their quiz result!
+        </div>
+
+ <img alt="Chucho Benitez" class="chu" src="https://media.cnn.com/api/v1/images/stellar/prod/130729182240-christian-benitez.jpg?q=w_3100,h_2067,x_0,y_0,c_fill">
+        <img alt="Layun" class="lay" src="https://img.asmedia.epimg.net/resizer/V1GpjkK-wVKHWP5xOlIL9hEczwI=/644x362/filters:focal(2008x497:2018x507)/cloudfront-eu-central-1.images.arcpublishing.com/diarioas/CACRVZFFEJH4BLYBD3OKPCL7FA.jpg">
+         <img alt="Alvaro Fidalgo" class="fid" src="https://image-service.onefootball.com/transform?w=280&amp;h=210&amp;dpr=2&amp;image=https%3A%2F%2Fwp-images.onefootball.com%2Fwp-content%2Fuploads%2Fsites%2F10%2F2022%2F10%2FAmerica-v-Atletico-San-Luis-Torneo-Apertura-2022-Liga-MX-1665451592-1000x750.jpg">
+         <img alt="Agustin Marchesin" class="marche" src="https://tmssl.akamaized.net/images/foto/galerie/agustin-marchesin-1564640504-24120.jpg?lm=1564640515">
+        
+
+    
+<script>
+/*__POPCODESTART__*/
+var siu = document.querySelector(".result");
+var button = document.querySelector("button");
+var player = document.querySelector(".goals").value;
+var soccer = document.querySelector(".postions").value;
+var chu = document.querySelector(".chu");
+var lay = document.querySelector(".lay");
+var fid = document.querySelector(".fid");
+var mar = document.querySelector(".marche");
+
+button.onclick = function () {
+  var NUM = document.querySelector(".NUM").value;
+  var user = document.querySelector(".username").value;
+  console.log(NUM);
+  console.log(user);
+
+  if (NUM > 0 && NUM < 10 && user === "Goalie") {
+    siu.innerHTML = " You scored " + NUM + " and you play " + user + " which makes you Agustin Marchesin";
+    mar.style.display = "block";
+  } else if (NUM > 10 && NUM < 20 && user === "Mid field") {
+    siu.innerHTML = " You scored " + NUM + " and you play " + user + " which makes you Alvaro Fidalgo";
+    fid.style.display = "block";
+  } else if (NUM > 19 && NUM < 52 && user === "defense") {
+    siu.innerHTML = " You scored " + NUM + " and you play " + user + " which makes you Layun";
+    lay.style.display = "block";
+  } else if (NUM > 51 && NUM < 53 && user === "foward") {
+    siu.innerHTML = " You scored " + NUM + " and you play " + user + " which makes you Chucho benitez";
+    chu.style.display = "block";
+  } else {
+    siu.innerHTML = "Incorrect inputs, try again";
+  }
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbInNpdSIsImRvY3VtZW50IiwicXVlcnlTZWxlY3RvciIsImJ1dHRvbiIsInBsYXllciIsInZhbHVlIiwic29jY2VyIiwiY2h1IiwibGF5IiwiZmlkIiwibWFyIiwib25jbGljayIsIk5VTSIsInVzZXIiLCJjb25zb2xlIiwibG9nIiwiaW5uZXJIVE1MIiwic3R5bGUiLCJkaXNwbGF5Il0sIm1hcHBpbmdzIjoiQUFBQSxJQUFJQSxHQUFHLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixTQUF2QixDQUFWO0FBQ0EsSUFBSUMsTUFBTSxHQUFHRixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBYjtBQUNBLElBQUlFLE1BQU0sR0FBR0gsUUFBUSxDQUFDQyxhQUFULENBQXVCLFFBQXZCLEVBQWlDRyxLQUE5QztBQUNBLElBQUlDLE1BQU0sR0FBR0wsUUFBUSxDQUFDQyxhQUFULENBQXVCLFdBQXZCLEVBQW9DRyxLQUFqRDtBQUNBLElBQUlFLEdBQUcsR0FBR04sUUFBUSxDQUFDQyxhQUFULENBQXVCLE1BQXZCLENBQVY7QUFDQSxJQUFJTSxHQUFHLEdBQUdQLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixNQUF2QixDQUFWO0FBQ0EsSUFBSU8sR0FBRyxHQUFHUixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsTUFBdkIsQ0FBVjtBQUNBLElBQUlRLEdBQUcsR0FBR1QsUUFBUSxDQUFDQyxhQUFULENBQXVCLFNBQXZCLENBQVY7O0FBQ0FDLE1BQU0sQ0FBQ1EsT0FBUCxHQUFpQixZQUFXO0FBQ3hCLE1BQUlDLEdBQUcsR0FBR1gsUUFBUSxDQUFDQyxhQUFULENBQXVCLE1BQXZCLEVBQStCRyxLQUF6QztBQUNBLE1BQUlRLElBQUksR0FBR1osUUFBUSxDQUFDQyxhQUFULENBQXVCLFdBQXZCLEVBQW9DRyxLQUEvQztBQUNBUyxFQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWUgsR0FBWjtBQUNBRSxFQUFBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWUYsSUFBWjs7QUFFQSxNQUFJRCxHQUFHLEdBQUcsQ0FBTixJQUFXQSxHQUFHLEdBQUcsRUFBakIsSUFBdUJDLElBQUksS0FBSyxRQUFwQyxFQUE4QztBQUMxQ2IsSUFBQUEsR0FBRyxDQUFDZ0IsU0FBSixHQUFnQixpQkFBaUJKLEdBQWpCLEdBQXVCLGdCQUF2QixHQUEwQ0MsSUFBMUMsR0FBaUQsb0NBQWpFO0FBQ0FILElBQUFBLEdBQUcsQ0FBQ08sS0FBSixDQUFVQyxPQUFWLEdBQW9CLE9BQXBCO0FBQ0gsR0FIRCxNQUlJLElBQUlOLEdBQUcsR0FBRyxFQUFOLElBQVlBLEdBQUcsR0FBRyxFQUFsQixJQUF3QkMsSUFBSSxLQUFLLFdBQXJDLEVBQWtEO0FBQ2xEYixJQUFBQSxHQUFHLENBQUNnQixTQUFKLEdBQWdCLGlCQUFpQkosR0FBakIsR0FBdUIsZ0JBQXZCLEdBQTBDQyxJQUExQyxHQUFpRCxpQ0FBakU7QUFDREosSUFBQUEsR0FBRyxDQUFDUSxLQUFKLENBQVVDLE9BQVYsR0FBb0IsT0FBcEI7QUFDRixHQUhHLE1BS0MsSUFBS04sR0FBRyxHQUFHLEVBQU4sSUFBWUEsR0FBRyxHQUFHLEVBQWxCLElBQXdCQyxJQUFJLEtBQUssU0FBdEMsRUFBZ0Q7QUFDckRiLElBQUFBLEdBQUcsQ0FBQ2dCLFNBQUosR0FBZ0IsaUJBQWlCSixHQUFqQixHQUF1QixnQkFBdkIsR0FBMENDLElBQTFDLEdBQWlELHdCQUFqRTtBQUNJTCxJQUFBQSxHQUFHLENBQUNTLEtBQUosQ0FBVUMsT0FBVixHQUFvQixPQUFwQjtBQUNILEdBSEksTUFJQSxJQUFLTixHQUFHLEdBQUUsRUFBTCxJQUFZQSxHQUFHLEdBQUcsRUFBbEIsSUFBd0JDLElBQUksS0FBSyxRQUF0QyxFQUErQztBQUNwRGIsSUFBQUEsR0FBRyxDQUFDZ0IsU0FBSixHQUFnQixpQkFBaUJKLEdBQWpCLEdBQXVCLGdCQUF2QixHQUEwQ0MsSUFBMUMsR0FBaUQsaUNBQWpFO0FBQ0lOLElBQUFBLEdBQUcsQ0FBQ1UsS0FBSixDQUFVQyxPQUFWLEdBQW9CLE9BQXBCO0FBQ0gsR0FISSxNQUlDO0FBQ1RsQixJQUFBQSxHQUFHLENBQUNnQixTQUFKLEdBQWdCLDZCQUFoQjtBQUNJO0FBQ0osQ0ExQkQiLCJzb3VyY2VzQ29udGVudCI6WyJsZXQgc2l1ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5yZXN1bHRcIik7XG5sZXQgYnV0dG9uID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcImJ1dHRvblwiKTtcbmxldCBwbGF5ZXIgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLmdvYWxzXCIpLnZhbHVlO1xubGV0IHNvY2NlciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucG9zdGlvbnNcIikudmFsdWU7XG5sZXQgY2h1ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5jaHVcIik7XG5sZXQgbGF5ID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5sYXlcIik7XG5sZXQgZmlkID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5maWRcIik7XG5sZXQgbWFyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5tYXJjaGVcIik7XG5idXR0b24ub25jbGljayA9IGZ1bmN0aW9uKCkge1xuICAgIGxldCBOVU0gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLk5VTVwiKS52YWx1ZTtcbiAgICBsZXQgdXNlciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIudXNlcm5hbWVcIikudmFsdWU7XG4gICAgY29uc29sZS5sb2coTlVNKTtcbiAgICBjb25zb2xlLmxvZyh1c2VyKTtcblxuICAgIGlmIChOVU0gPiAwICYmIE5VTSA8IDEwICYmIHVzZXIgPT09IFwiR29hbGllXCIpIHtcbiAgICAgICAgc2l1LmlubmVySFRNTCA9IFwiIFlvdSBzY29yZWQgXCIgKyBOVU0gKyBcIiBhbmQgeW91IHBsYXkgXCIgKyB1c2VyICsgXCIgd2hpY2ggbWFrZXMgeW91IEFndXN0aW4gTWFyY2hlc2luXCI7XG4gICAgICAgIG1hci5zdHlsZS5kaXNwbGF5ID0gXCJibG9ja1wiO1xuICAgIH1cbiAgIGVsc2UgaWYgKE5VTSA+IDEwICYmIE5VTSA8IDIwICYmIHVzZXIgPT09IFwiTWlkIGZpZWxkXCIpIHtcbiAgICAgICAgc2l1LmlubmVySFRNTCA9IFwiIFlvdSBzY29yZWQgXCIgKyBOVU0gKyBcIiBhbmQgeW91IHBsYXkgXCIgKyB1c2VyICsgXCIgd2hpY2ggbWFrZXMgeW91IEFsdmFybyBGaWRhbGdvXCI7XG4gICAgICAgZmlkLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgfVxuICAgIFxuICAgIGVsc2UgaWYgKCBOVU0gPiAxOSAmJiBOVU0gPCA1MiAmJiB1c2VyID09PSBcImRlZmVuc2VcIil7XG4gICAgc2l1LmlubmVySFRNTCA9IFwiIFlvdSBzY29yZWQgXCIgKyBOVU0gKyBcIiBhbmQgeW91IHBsYXkgXCIgKyB1c2VyICsgXCIgd2hpY2ggbWFrZXMgeW91IExheXVuXCI7XG4gICAgICAgIGxheS5zdHlsZS5kaXNwbGF5ID0gXCJibG9ja1wiO1xuICAgIH1cbiAgICBlbHNlIGlmICggTlVNID41MSAgJiYgTlVNIDwgNTMgJiYgdXNlciA9PT0gXCJmb3dhcmRcIil7XG4gICAgc2l1LmlubmVySFRNTCA9IFwiIFlvdSBzY29yZWQgXCIgKyBOVU0gKyBcIiBhbmQgeW91IHBsYXkgXCIgKyB1c2VyICsgXCIgd2hpY2ggbWFrZXMgeW91IENodWNobyBiZW5pdGV6XCI7XG4gICAgICAgIGNodS5zdHlsZS5kaXNwbGF5ID0gXCJibG9ja1wiO1xuICAgIH1cbiAgICAgZWxzZSB7XG4gc2l1LmlubmVySFRNTCA9IFwiSW5jb3JyZWN0IGlucHV0cywgdHJ5IGFnYWluXCI7XG4gICAgfVxufTsiXX0=</script></body></html>
